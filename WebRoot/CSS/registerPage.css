@@ -1,0 +1,13 @@
+@import "loginAndRegisterPage.css"; 
+
+div#register_Box{
+	display:none;
+	position:fixed;
+	z-index:14;
+	margin:0px;
+	padding:0px;
+	height:100%;
+	width:100%;
+	font:12px/1.6 arial,helvetica,sans-serif;
+	background-color:rgba(234,237,236,0.8);
+}

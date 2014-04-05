@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="MusicDessert_Software"
+  id="myeclipse.1396679972465"
+  context-root="/MusicDessert_Software"
+  j2ee-spec="6.0"
+  archive="MusicDessert_Software.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

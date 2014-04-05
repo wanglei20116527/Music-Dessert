@@ -1,0 +1,209 @@
+div.box{
+	position:fixed;
+	top:20%;
+	left:50%;
+	margin-left:-272px;
+	padding:0px;
+	width:560px;
+	box-shadow:0px 0px 8px 4px rgba(0,0,0,0.2);
+	background-color:white;
+}
+
+div.box > div{
+	display:inline-block;
+	height:100%;
+	overflow:hidden;
+}
+
+div.box > div.left_box{
+	width:280px;
+	padding:40px;
+	height:100%;
+}
+
+div.box > div.left_box > div.title > span{
+	font-size:18px;
+	color:#333;
+	padding:0px;
+}
+
+div.box > div.left_box > form{
+	display:block;
+	width:100%;
+	margin:0px;
+	overflow:hidden;
+	padding:0px;
+}
+
+div.box > div.left_box > form > div{
+	float:left;
+	margin-top:12px;
+	padding:8px 10px;
+	background-color:#eef1f0;
+}
+
+div.box > div.left_box > form > div > div{
+	display:inline-block;
+	float:left;
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
+
+div.box > div.left_box > form > div > div:first-child{
+	color:#333;
+	width:80px;
+	
+}
+
+div.box > div.left_box > form > div > div:nth-child(2) > input{
+	width:180px;
+	border:0 none;
+	outline:none;
+	color:#333;
+	background-color:#eef1f0;
+}
+
+div.box > div.left_box > form > div.identifyingCode > div:nth-child(2) > input{
+	width:80px;
+}
+
+div.box > div.left_box > form > div.createIndentifyingCode{
+	position:relative;
+	left:4px;
+	width:74px;
+	padding:0px;
+}
+
+div.box > div.left_box > form > div.createIndentifyingCode > a{
+	display:block;
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-left:26px;
+	height:100%;
+	width:70px;
+	font-size: 14px;
+	color:white;
+	text-decoration:none;
+	background-color:#9dd6c5;
+}
+
+div.box > div.left_box > form > div.createIndentifyingCode > a:hover{
+	color:#5a5a5a;
+	background-color:#bae2d6;
+}
+
+div.box > div.left_box > form > div.otherInfor{
+	width:260px;
+	background-color:white;
+}
+
+div.box > div.left_box > form > div.otherInfor > div:first-child{
+	float:left;
+	position:relative;
+	right:10px;
+	width:50%;
+}
+
+div.box > div.left_box > form > div.otherInfor > div:first-child > input{
+	position:relative;
+	top:2px;
+}
+
+div.box > div.left_box > form > div.otherInfor > div:nth-child(2){
+	float:right;
+}
+
+div.box > div.left_box > form > div.otherInfor > div:nth-child(2) > a{
+	color:#5b9;
+	text-decoration: none;
+}
+
+div.box > div.left_box > form > div.otherInfor > div:nth-child(2) > a:hover{
+	text-decoration:underline;
+}
+
+div.box > div.left_box > form > div.submitButton{
+	width:100%;
+	background-color:white;
+}
+
+div.box > div.left_box > form > div.submitButton > input{
+	position:relative;
+	right:10px;
+	float:right;
+	display:block;
+	width:100%;
+	height:35px;
+	line-height:35px;
+	text-align:center;
+	border:0 none;
+	color:#fff;
+	font-size:14px;
+	float:right;
+	cursor:pointer;
+	outline:none;
+	background-color:#9dd6c5;
+}
+
+div.box > div.left_box > form > div.submitButton > input:hover{
+	background-color:#bae2d6;
+}
+
+div.box > div.right_box{
+	float:right;
+	width:180px;
+	margin:0px;
+	padding-top:10px;
+	padding-right:10px;
+	padding-bottom:30px;
+	background-color:#5a5a5a;
+} 
+
+div.box > div.right_box > div:first-child{
+	width:100%;
+	left:100%;
+	overflow:hidden;
+}
+
+div.box > div.right_box > div:first-child > a{
+	float:right;
+	color:#fff;
+	font-size:9px;
+	text-decoration:none;
+}
+
+div.box > div.right_box > div:nth-child(2){
+	position:relative;
+	color:#aaa;
+}
+
+div.box > div.right_box > div:nth-child(2) > *{
+	display:block;
+	width:130px;
+}
+
+div.box > div.right_box > div:nth-child(2) > span{
+	line-height:8px;
+}
+
+div.box > div.right_box > div:nth-child(2) > a{
+	text-decoration:none;
+	border:1px solid #666;
+	display:block;
+	width:130px;
+	height:30px;
+	padding-left:10px;
+	line-height:30px;
+	font-size:14px;
+	margin-top:10px;
+	color:white;
+}
+
+div.box > div.right_box > div:nth-child(2) > a:hover{
+	background-color:#666;
+}
+
+
+
+

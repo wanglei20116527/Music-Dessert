@@ -1,0 +1,210 @@
+div#musicManagerInterface{
+	position:fixed;
+	overflow:hidden;
+	top:0px;
+	left:-650px;/* the default value is -650*/
+	width:574px;
+	height:100%;
+	margin:0px;
+	padding:0px;
+	padding-left:60px;
+	padding-right:40px;
+	float:left;
+	z-index:10;
+	box-shadow:4px 0px 4px 4px rgba(0,0,0,0.1);
+	background:white;
+}
+
+div#musicManagerInterface > div#switch_button{
+	position:absolute;
+	float:right;
+	height:85px;
+	width:16px;
+	right:0px;
+	top:280px;
+	z-index:12;
+	border:0px;
+}
+
+div#musicManagerInterface > div#switch_button > a{
+	display:block;
+	height:100%;
+	width:100%;
+	border:0px;
+	background-image:url("images/sidebar_icon.png");
+}
+
+div#scrollbar_background{
+	position:fixed;
+	right:0px;
+	height:100%;
+	width:15px;
+	z-index:4;
+	background-image:url("images/scrollbarbg.gif");
+	background-repeat:repeat-y;
+}
+
+div#musicManagerInterface > div#switch_button > a:hover{
+	border:0px;
+	background-position:bottom left;
+}
+
+div#musicManagerInterface > div{
+	margin:0px;
+}
+
+div#musicManager_head {
+	padding-top:60px;
+}
+
+div#musicManager_head > div{
+	display:inline-block;
+}
+
+div#musicManager_head > div:first-child > span{
+	display:inline-block;
+	padding:0px;
+	margin:0px;
+	float:left;
+	width:50%;
+	color:#A0A7A5;
+	font-size:38px;
+	font-family:"URW Chancery L";
+}
+
+div#musicManager_head > div:nth-child(2){
+	position:relative;
+	top:10px;
+	float:right;
+	height:30px;
+	width:240px;
+	border:1px solid #e1e8e6;
+	font:12px/1.6 arial,helvetica,sans-serif;
+	background:#fff;
+}
+
+div#musicManager_head > div:nth-child(2) > input{
+	width:210px;
+	border:0 none;
+	line-height:20px;
+	outline:0;
+	padding-left:8px;
+	padding-top:4px;
+}
+
+div#musicManager_head > div:nth-child(2) > a{
+	position:absolute;
+	top:2px;
+	right:0px;
+	display:inline-block;
+	height:30px;
+	width:25px;
+	text-decoration:none;
+	background-image:url("images/search_btn.png");
+}
+
+div#musicManager_body{
+	margin-top:60px !important;
+}
+
+div#musicManager_body > div#music_category{
+	display:block;
+	width:100%;
+}
+
+div#musicManager_body > div#music_category > ul{
+	display:block;
+	padding:0px;
+	width:100%;
+	height:auto;
+}
+
+div#musicManager_body > div#music_category > ul > li{
+	display:inline-block;
+	
+}
+
+div#musicManager_body > div#music_category > ul > li > a{
+	padding-right:10px;
+	text-decoration:none;
+	margin-right:10px;
+	border-right:1px solid #ccc;
+	color:#888;
+	margin-bottom:12px;
+	font:12px/1.6 arial,helvetica,sans-serif;
+}
+
+div#musicManager_body > div#music_category > ul > li > a:hover{
+	color:#9dd6c5;
+}
+
+div#musicManager_body > div#music_category > ul > li:last-child > a{
+	border-right:0px !important;
+}
+
+div#musicManager_body > div#music_category > ul > li > a:hover{
+	color:#9dd6c5;
+}
+
+div#music > div{
+	width:100%;
+}
+
+div#music > div > div:first-child{
+	font-size: 13px;
+}
+
+div#music > div > div:nth-child(2) > ul{
+	display:block;
+	padding:0px;
+	width:100%;
+	overflow:hidden;
+}
+
+div#music > div > div:nth-child(2) > ul > li{
+	display:inline-block;
+	float:left;
+	height:45px;
+	width:50%;
+	margin-bottom:15px;
+}
+
+div#music > div > div:nth-child(2) > ul > li > div{
+	width:100%;
+	height:100%;
+}
+
+div#music > div > div:nth-child(2) > ul > li > div > img{
+	display:inline-block;
+	float:left;
+	width:45px;
+	height:45px;
+	overflow:hidden;
+	border-radius:25px;
+}
+
+div#music > div > div:nth-child(2) > ul > li > div > span{
+	display:inline-block;
+	position:relative;
+	top:5px;
+	float:left;
+	margin-left:10px;
+	height:40px;
+}
+
+div#music > div > div:nth-child(2) > ul > li > div > span > span{
+	display:inline-block;
+	width:100%;
+	color:#888;
+}
+
+div#music > div > div:nth-child(2) > ul > li > div > span > a{
+	text-decoration:none;
+	font-size:18px;
+	color:rgb(60,60,60);
+}
+
+div#music > div > div:nth-child(2) > ul > li > div > span > a:hover{
+	color:black;
+}
+

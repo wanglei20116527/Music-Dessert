@@ -1,0 +1,136 @@
+div#player_box{
+	position:fixed;
+	float:right;
+	top:100px !important;
+	right:150px;
+	width:510px;
+	height:245px;
+	z-index:5;
+	background-color:white;
+	box-shadow:0px 0px 10px 6px rgba(0,0,0,0.1);
+}
+
+div#player_box > div:nth-child(3){
+	height:0px;
+	width:0px;
+}
+
+div#player_box > div#music_image{
+	float:left;
+	width:245px;
+	height:245px;
+	overflow:hidden;
+	background-color:white;
+}
+
+div#player_box > div#player{
+	float:left;
+	height:100%;
+	width:265px;
+	color:grey;
+	background-color:white;
+}
+
+div#player > div{
+	padding-left:20px;
+}
+
+div#player > div#playKey{
+	height:30px;
+}
+
+div#player > div#playKey > a{
+	display:block;
+	float:right;
+	height:29px;
+	width:40px;
+	overflow:hidden;
+	margin-right:5px;
+	background-image:url("images/playkey.png");
+}
+
+div#player > div:nth-child(2) > span{
+	display:block;
+	width:100%;
+	color:grey;
+}
+
+div#player > div:nth-child(2) > span:first-child{
+	height:20px;
+	font-size:20px;
+	margin-bottom:8px;
+}
+
+div#player > div:nth-child(2) > span:last-child{
+	font-size:15px;
+}
+
+div#player > div:nth-child(3){
+	margin-top:20px;
+	color:#9dd6c5;
+}
+
+div#player > div:nth-child(3) > span{
+	margin:0px;
+	display:block;
+}
+
+div#player > div:nth-child(3) > span:first-child{
+	font-size:16px;
+}
+
+div#player > div:nth-child(3) > span:nth-child(2){
+	position:relative;;
+	bottom:4px;
+}
+
+div#player > div:nth-child(4){
+	position:relative;;
+	bottom:6px;
+}
+
+div#player > div:nth-child(4) > span{
+	position:relative;
+	left:180px;
+	font-size:14px;
+}
+
+div#player > div:nth-child(4) > a{
+	position:relative;
+	left:184px;
+	font-size:12px;
+}
+
+div#player > div:last-child{
+	margin-top:30px;
+	height:45px;
+	overflow:hidden;
+}
+
+
+div#player > div:last-child > a{
+	position:relative;
+	display:inline-block;
+	margin-top:6px;
+	height:38px;
+	width:40px;
+}
+
+div#player > div:last-child > a#previousAlbum{
+	left:70px;
+	bottom:4px;
+	background-image:url("images/favoriteAlbumIcon.png");
+}
+
+div#player > div:last-child > a#loopCurrentAlbum{
+	left:85px;
+	bottom:6px;
+	background-image:url("images/deleteAlbumIcon.png");
+}
+
+div#player > div:last-child > a#nextAlbum{
+	left:90px;
+	background-image:url("images/nextAlbumIcon.png");
+}
+
+

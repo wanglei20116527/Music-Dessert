@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Sat Apr 05 19:35:00 CST 2014
+sessionFactoryName=
+genBasicCompId=false
+profile=
+daoSFId=
+version=4.1
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=increment
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=false
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=/MusicDessert_Software/hibernate.reveng.xml
+configFile=/MusicDessert_Software/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=false
