@@ -1,6 +1,5 @@
 package com.MusicDessert.DAO.implement;
 
-
 import java.util.List;
 
 import org.hibernate.FlushMode;
@@ -22,5 +21,4 @@ public class UserDAO extends HibernateDaoSupport implements
 			e.printStackTrace();
 		}
 	}
-
 }
