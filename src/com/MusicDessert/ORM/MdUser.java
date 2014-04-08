@@ -3,26 +3,34 @@ package com.MusicDessert.ORM;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * MdUser entity. @author MyEclipse Persistence Tools
+ */
+
 public class MdUser implements java.io.Serializable {
 
+	// Fields
 
-	private static final long serialVersionUID = 1L;
 	private Integer id;
 	private String name;
 	private String password;
 	private String phoneNumber;
 	private Set mdCategories = new HashSet(0);
 
+	// Constructors
 
+	/** default constructor */
 	public MdUser() {
 	}
 
+	/** minimal constructor */
 	public MdUser(String name, String password, String phoneNumber) {
 		this.name = name;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
 	}
 
+	/** full constructor */
 	public MdUser(String name, String password, String phoneNumber,
 			Set mdCategories) {
 		this.name = name;

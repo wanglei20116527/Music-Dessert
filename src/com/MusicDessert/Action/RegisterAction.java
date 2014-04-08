@@ -119,7 +119,7 @@ public class RegisterAction extends ActionSupport {
 	}
 	
 	private boolean isUserNameValid(String userName){
-		final String  REGEXP_EXPRESSION = "^[0-9a-zA-Z]{1,}$";
+		final String  REGEXP_EXPRESSION = "^[a-zA-Z][0-9a-zA-Z]{1,}$";
 		Pattern pattern = Pattern.compile(REGEXP_EXPRESSION);
 		Matcher matcher = pattern.matcher(userName);
 		boolean isUserNameValid = matcher.matches();
