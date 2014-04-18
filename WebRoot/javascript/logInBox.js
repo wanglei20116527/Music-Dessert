@@ -22,5 +22,8 @@ function closeLogInBox(){
 function openRegisterBoxForLogInPage(){
 	closeLogInBox();
 	openRegisterBox();
-	
+}
+
+function removeLogInBox(){
+	$("#logIn_Box").remove();
 }

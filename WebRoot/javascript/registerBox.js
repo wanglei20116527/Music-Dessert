@@ -18,3 +18,7 @@ function openRegisterBox(){
 function closeRegisterBox(){
 	$("#register_Box").css("display","none");
 }
+
+function removeRegisterBox(){
+	$("#register_Box").remove();
+}

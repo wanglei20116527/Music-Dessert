@@ -6,8 +6,10 @@
 	<link type = "text/css" rel="stylesheet" href="CSS/loginPage.css"/>
 	
 	<script type = "text/javascript" src = "javascript/jquery.js"></script>
+	<script type="text/javascript" src = "javascript/common.js"></script>
 	<script type = "text/javascript" src = "javascript/registerBox.js"></script>
 	<script type = "text/javascript" src = "javascript/logInBox.js"></script>
+	<script type = "text/javascript" src = "javascript/login.js"></script>
   </head>
   
   <body>
@@ -17,13 +19,13 @@
 					<div class = "title">
 						<span>登录</span>
 					</div>
-					<form method = "post">
+					<form method = "post" onsubmit = "return login()">
 						<div class = "userName">
 							<div>
 								<span>用户名</span>
 							</div>
 							<div>
-								<input type = "text" name = "userName"/>
+								<input type = "text" name = "userName" id = "login_userName" onblur = "checkLoginUserName()" />
 							</div>
 						</div>
 						<div class = "password">
@@ -31,7 +33,7 @@
 								<span>密码</span>
 							</div>
 							<div>
-								<input type = "password" name = "password"/>
+								<input type = "password" name = "password" id = "login_password" onblur = "checkLoginPassord()"/>
 							</div>
 						</div>
 						<div class = "identifyingCode">
@@ -39,11 +41,11 @@
 								<span>手机验证码</span>
 							</div>
 							<div>
-								<input type = "text" name = "">
+								<input type = "text" name = "" id = "login_IdentifyingCode" onblur = "checkLoginIdentifyingCode()"/>
 							</div>
 						</div>
 						<div class = "createIndentifyingCode">
-							<a href = "javascript:;">create</a>
+							<a href = "javascript:;" onclick = "sendLoginIdentifyingCodeToPhone()">create</a>
 						</div>
 						<div class = "otherInfor">
 							<div>

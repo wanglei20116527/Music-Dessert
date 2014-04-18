@@ -19,18 +19,15 @@ public class MdUser implements java.io.Serializable {
 
 	// Constructors
 
-	/** default constructor */
 	public MdUser() {
 	}
 
-	/** minimal constructor */
 	public MdUser(String name, String password, String phoneNumber) {
 		this.name = name;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
 	}
 
-	/** full constructor */
 	public MdUser(String name, String password, String phoneNumber,
 			Set mdCategories) {
 		this.name = name;

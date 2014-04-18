@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="plugins/perfect-scrollbar/src/perfect-scrollbar.css"/>
 
 	<script type="text/javascript" src="javascript/jquery.js"></script>
+	<script type="text/javascript" src="javascript/common.js"></script>
 	<script type="text/javascript" src="plugins/flowplayer/flowplayer.min.js"></script>
 	<script type="text/javascript" src="plugins/perfect-scrollbar/src/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="plugins/perfect-scrollbar/src/perfect-scrollbar.js"></script>
@@ -23,6 +24,9 @@
 	<script type="text/javascript" src="javascript/playlist.js"></script>
 	<script type="text/javascript" src="javascript/homePage.js"></script>
 	<script type="text/javascript" src="javascript/player.js"></script>
+	<script type="text/javascript" src="javascript/login.js"></script>
+	<script type="text/javascript" src="javascript/logout.js"></script>
+	<script type="text/javascript" src="javascript/loginAndLogout.js"></script>
 		
 	<script>
 		$(window).resize(function(){
@@ -39,25 +43,18 @@
 					<span>Music</span>
 					<span>Dessert</span>
 				</div>
-				<div>
-					<a href = "javascript:;" onclick = "openLogInBox()">登录</a>
-					<i></i>
-					<a href = "javascript:;" onclick = "openRegisterBox()">注册</a>
-					<i></i>
-					<a href = "javascript:;">Music Dessert</a>
-				</div>
+				
+				<script type = "text/javascript">
+					createLoginDivOrLogoutDiv();
+				</script>
 			</div>
 			
 			<div id = "foot_playerInterface">
 				<div>
-					<span>网站设计与开发技术</span>
+					<span>王磊</span>
 				</div>
 				<div>
-					<span>王磊</span>
-					<span>屈家彬</span>
-					<span>张迪</span>
-					<span>姚启发</span>
-					<span>王雷</span>
+					<span>Java语言程序设计</span>
 				</div>
 				<div>
 					<div>
@@ -69,81 +66,8 @@
 			
 			<div id = "playlist_box">
 				<div id = "playlist">
-					<ul>
-						<li>
-							<a href = "javascript:;">王磊</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">王磊</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">王磊</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						<li>
-							<a href = "javascript:;">呼吸</a>
-							<span></span>
-						</li>
-						
-
+					<ul id = "playlistContainer">
+						<!-- 这里是用来填写 需要播放音乐的播放列表  -->
 					</ul>
 				</div>
 			</div>
@@ -173,13 +97,11 @@
 					</div>
 					<div>
 						<a id = "previousAlbum" href = "javascript:;" onclick = "playPrevious()"></a>
-						<a id = "loopCurrentAlbum" href = "javascript:;" value = "true" onclick="startOrStopLoop()"></a>
+						<a id = "loopCurrentAlbum" href = "javascript:;" value = "false" onclick="switchPlayedMusicState()"></a>
 						<a id = "nextAlbum" href = "javascript:;" onclick = "playNext()"></a>
 					</div>
 				</div>
-				
 			</div>
-
 		</div>
 		
 		<div id = "musicManagerInterface">
@@ -421,13 +343,20 @@
 			<div id = "switch_button">
 				<a href = "javascript:;" onclick="displayOrHiddenPlaylistInterface()"></a>
 			</div>
+			<div id = "flowplayer"></div>
+			<script type="text/javascript">
+				initFlowPlayerWithRecommandedMusics();
+			</script>
+			
 			
 		</div>
+		
 		<div id = "scrollbar_background"></div>
 
 		<script type="text/javascript">
 			$("div#musicManagerInterface").perfectScrollbar({suppressScrollX: true});
 		</script>
+		
 		<!-- 下面的代码 是用来处理 当用户没有登录的时候，我们将会将logIn.jsp和register.jsp文件给加载进来-->
  		<s:if test="true">
   			<s:include value="logIn.jsp"/>

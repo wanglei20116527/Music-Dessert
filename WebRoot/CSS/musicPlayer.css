@@ -112,24 +112,26 @@ div#player > div:last-child > a{
 	position:relative;
 	display:inline-block;
 	margin-top:6px;
-	height:38px;
-	width:40px;
+	height:64px;
+	width:64px;
 }
 
 div#player > div:last-child > a#previousAlbum{
 	left:70px;
-	bottom:4px;
-	background-image:url("images/favoriteAlbumIcon.png");
+	bottom:15px;
+	background-image:url("images/previousAlbumIcon.png");
 }
 
 div#player > div:last-child > a#loopCurrentAlbum{
-	left:85px;
+	left:64px;
 	bottom:6px;
+	width:40px !important;
 	background-image:url("images/deleteAlbumIcon.png");
 }
 
 div#player > div:last-child > a#nextAlbum{
-	left:90px;
+	left:50px;
+	bottom:15px;
 	background-image:url("images/nextAlbumIcon.png");
 }
 

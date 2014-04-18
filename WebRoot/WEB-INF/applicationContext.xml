@@ -98,7 +98,40 @@
     	<property name="register">
     		<ref bean="register" />
     	</property>
-    </bean>    
+    </bean>
+    
+    
+    <bean id="login" class="com.MusicDessert.Service.implement.Login" scope="prototype"> 
+    	<property name="userDAO">
+    		<ref bean="userDAO"/>
+    	</property>
+    </bean>
+    
+    <bean id = "loginAction" class="com.MusicDessert.Action.LoginAction" scope = "prototype">
+    	<property name="login">
+    		<ref bean="login" />
+    	</property>
+    </bean>
+    
+   <bean id = "logoutAction" class="com.MusicDessert.Action.LogoutAction" scope = "prototype"></bean>     
    
+   
+   <bean id="recommandedmusicDAO" class="com.MusicDessert.DAO.implement.MdRecommandedmusicDAO">
+    	<property name="sessionFactory">
+    		<ref bean="sessionFactory"/>
+    	</property>
+   </bean>
+   
+   <bean id="recommandedMusic" class="com.MusicDessert.Service.implement.Recommandedmusic" scope="prototype"> 
+    	<property name="recommandedmusicDAO">
+    		<ref bean="recommandedmusicDAO"/>
+    	</property>
+   </bean>
+   
+   <bean id = "recommandedMusicAction" class="com.MusicDessert.Action.RecommandedmusicAction" scope = "prototype">
+    	<property name="recommandedMusic">
+    		<ref bean="recommandedMusic" />
+    	</property>
+    </bean>
     
 </beans> 

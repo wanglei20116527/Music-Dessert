@@ -23,7 +23,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class RegisterAction extends ActionSupport {
 	
 	private static final long serialVersionUID = 1L;
-	private final long REGISTER_CODE_VALID_SECONDS = 30;
+	private final long REGISTER_CODE_VALID_SECONDS = 180;
 	
 	private HttpServletRequest request;
 	private HttpServletResponse response;
@@ -86,27 +86,30 @@ public class RegisterAction extends ActionSupport {
 			String identifyingCode = getInputRegisterIdentifyingCode();
 			if(!this.isUserNameValid(userName)){
 				out.println("userName_valid");
-				System.out.println("userName_valid");
 				return;
 			}
 			if(!this.isUserPasswordValid(password)){
 				out.println("password_valid");
-				System.out.println("password_valid");
 				return;
 			}
 			if(!this.isPhoneNumberValid(phoneNumber)){
 				out.println("phoneNumber_valid");
-				System.out.println("phoneNumber_valid");
+				return;
+			}
+			if(this.isUserName(userName)){
+				out.println("userName_registered");
+				return;
+			}
+			if(this.isPhoneNumberRegistered(phoneNumber)){
+				out.println("phoneNumber_registered");
+				return;	
+			}
+			if(this.isRegisterIdentifyingCodeLoseEfficacy()){
+				out.println("identifyingCode_Lose_Efficacy");
 				return;
 			}
 			if(!isIdentifyingCodeCorrect(identifyingCode)){
 				out.println("identifyingCode_wrong");//这个返回值表示的是用户输入的验证码是错误的，或者是用户在没有产生验证码
-				System.out.println("identifyingCode_wrong");
-				return;
-			}
-			if(this.isUserNameOrPhoneNumberRegistered(userName, phoneNumber)){
-				out.println("userName_or_phoneNumber_registered");
-				System.out.println("userName_or_phoneNumber_registered");
 				return;
 			}
 			
@@ -127,9 +130,7 @@ public class RegisterAction extends ActionSupport {
 	}
 	
 	private boolean isUserPasswordValid(String password){
-		boolean isPasswordValid = true;
-		return isPasswordValid;
-		
+		return true;//对于这里的用户注册使用的密码，我们以后有时间才写
 	}
 	
 	private boolean isPhoneNumberValid(String phoneNumber){
@@ -140,14 +141,15 @@ public class RegisterAction extends ActionSupport {
 		return isPhoneNumberValid;
 	}
 	
-	private boolean isUserNameOrPhoneNumberRegistered(String userName, String phoneNumber){
-		boolean isUserNameOrPhoneNumberRegistered = false;
-		return isUserNameOrPhoneNumberRegistered;
+	private boolean isUserName(String userName){
+		boolean isUserNameRegistered = this.register.isUserNameRegistered(userName);
+		return isUserNameRegistered;
 	}
 	
 	private boolean isIdentifyingCodeCorrect(String identifyingCode){
-		System.out.println();
 		boolean isIdentifyingCodeCorrect= false; 
+		System.out.println("#" + identifyingCode + "#");
+		System.out.println("#" + this.getRegisterIdentifyingCoder().getIdentifyingCode() + "#");
 		if(this.getRegisterIdentifyingCoder().getIdentifyingCode() == null){
 			isIdentifyingCodeCorrect = false;	
 		}else if(this.getRegisterIdentifyingCoder().getIdentifyingCode().equals(identifyingCode)){
@@ -179,8 +181,7 @@ public class RegisterAction extends ActionSupport {
 	
 	//下面的函数是用来检测用户注册使用的电话号码是否已经被注册了
 	private boolean isPhoneNumberRegistered(String phoneNumber){
-		boolean phoneNumberRegistered = false;
-		//这里我们还要通过到数据库中去检测才能够知道结果
+		boolean phoneNumberRegistered = this.register.isPhoneNumberRegisterd(phoneNumber);
 		return phoneNumberRegistered;
 		
 	}

@@ -11,5 +11,12 @@
         </action>
         <action name = "registerAction" class = "registerAction" method = "register"/> 
         <action name = "sendRegisterIdentifyingCodeAction" class = "registerAction" method = "sendRegisterIdentifyingCode"/> 
-    </package> 
+        <action name = "loginAction" class = "loginAction" method = "login"/> 
+        <action name = "isUserloginAction" class = "loginAction" method = "isUserLogin"/> 
+        <action name = "logoutAction" class = "logoutAction" method = "logout">
+        	<result name = "success" type = "redirect">/index.jsp</result>
+        </action> 
+        <action name = "sendLoginIdentifyingCodeAction" class = "loginAction" method="sendLoginIdentifyingCode"/>
+        <action name = "recommandedMusicAction" class = "recommandedMusicAction" method = "getAllRecommandedmusics"/>
+    </package>  
 </struts> 

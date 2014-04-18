@@ -1,12 +1,13 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<html id = "registerPage">
   <head>
 	<link type = "text/css" rel="stylesheet" href="CSS/registerPage.css"/>
 	
 	<script type = "text/javascript" src = "javascript/jquery.js"></script>
 	<script type = "text/javascript" src = "javascript/common.js"></script>
+	<script type = "text/javascript" src = "javascript/logInBox.js"></script>
 	<script type = "text/javascript" src = "javascript/registerBox.js"></script>
 	<script type = "text/javascript" src = "javascript/register.js"></script>
 
@@ -53,7 +54,7 @@
 							</div>
 						</div>
 						<div class = "createIndentifyingCode">
-							<a href = "javascript:;" onclick = "sendRegisterIdentifyingCode()">create</a>
+							<a href = "javascript:;" onclick = "sendRegisterIdentifyingCodeToPhone()">create</a>
 						</div>
 						<div class = "submitButton">
 							<input type = "submit" value = "注册"/>
