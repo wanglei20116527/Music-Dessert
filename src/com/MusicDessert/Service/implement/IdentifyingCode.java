@@ -6,15 +6,11 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 
+import com.opensymphony.xwork2.ActionContext;
+
 abstract class IdentifyingCode {	
-	private HttpSession session;
 	private String IDENTIFYING_CODE_KEY;
 	private String IDENTIFYING_CODE_CREATE_TIME_KEY;
-	
-	
-	public IdentifyingCode(){
-		session = ServletActionContext.getRequest().getSession();
-	}
 	
 	protected void setIdentifyingCodeKey(String identifyCodeKey){
 		this.IDENTIFYING_CODE_KEY = identifyCodeKey;
@@ -33,7 +29,7 @@ abstract class IdentifyingCode {
 	}
 	
 	protected HttpSession getSession(){
-		return this.session;
+		return  ServletActionContext.getRequest().getSession();
 	}
 	
 	//下面的函数使用来创建验证码的（包括注册和登陆的验证码）
@@ -48,8 +44,8 @@ abstract class IdentifyingCode {
 	
 	private void saveIdentifyingCodeToSession(String identifyingCode, Date identifyingCodeCreateTime){
 		try{
-			this.session.setAttribute(IDENTIFYING_CODE_KEY, identifyingCode);	
-			this.session.setAttribute(IDENTIFYING_CODE_CREATE_TIME_KEY, identifyingCodeCreateTime);
+			this.getSession().setAttribute(IDENTIFYING_CODE_KEY, identifyingCode);	
+			this.getSession().setAttribute(IDENTIFYING_CODE_CREATE_TIME_KEY, identifyingCodeCreateTime);
 		}catch(Exception e){
 			e.printStackTrace();
 		}

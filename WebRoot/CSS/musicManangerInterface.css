@@ -208,3 +208,9 @@ div#music > div > div:nth-child(2) > ul > li > div > span > a:hover{
 	color:black;
 }
 
+div#flowplayer{
+	height:0px !important;
+	width:0px !important;
+	overflow:hidden;
+}
+

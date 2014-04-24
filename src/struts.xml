@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" ?> 
+<?xml version="1.0" encoding="UTF-8"?> 
 <!DOCTYPE struts PUBLIC 
     "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" 
     "http://struts.apache.org/dtds/struts-2.3.dtd"> 
  
 <struts> 
-	<constant name="struts.objectFactory" value="spring"/>
+	<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory"/>
+
     <package name="struts2" extends="struts-default"> 
         <action name = "testAction" class = "testAction"> 
             <result name = "success">/index.jsp</result> 
         </action>
         <action name = "registerAction" class = "registerAction" method = "register"/> 
-        <action name = "sendRegisterIdentifyingCodeAction" class = "registerAction" method = "sendRegisterIdentifyingCode"/> 
+        <action name = "sendRegisterIdentifyingCodeAction" class = "registerAction" method = "sendRegisterIdentifyingCode"/>
         <action name = "loginAction" class = "loginAction" method = "login"/> 
         <action name = "isUserloginAction" class = "loginAction" method = "isUserLogin"/> 
         <action name = "logoutAction" class = "logoutAction" method = "logout">

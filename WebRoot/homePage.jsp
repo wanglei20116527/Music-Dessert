@@ -54,7 +54,7 @@
 					<span>王磊</span>
 				</div>
 				<div>
-					<span>Java语言程序设计</span>
+					<span>网站设计与开发技术</span>
 				</div>
 				<div>
 					<div>

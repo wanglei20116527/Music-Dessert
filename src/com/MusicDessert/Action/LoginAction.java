@@ -26,12 +26,17 @@ public class LoginAction extends ActionSupport{
 	private final long REGISTER_CODE_VALID_SECONDS = 180;
 	
 	
-	private LogInIdentifyingCode logInIdentifyingCoder = new LogInIdentifyingCode();
+	private LogInIdentifyingCode logInIdentifyingCoder ;
 	private Login login;
+	
+	public LoginAction(){
+		this.setLogInIdentifyingCoder(new LogInIdentifyingCode());
+	}
 	
 	public void setLogInIdentifyingCoder(LogInIdentifyingCode logInIdentifyingCoder){
 		this.logInIdentifyingCoder = logInIdentifyingCoder;	
 	}
+	
 	
 	public void setLogin(Login login){
 		this.login = login;
