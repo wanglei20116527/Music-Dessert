@@ -124,7 +124,7 @@ function sendRegisterIdentifyingCodeToPhone(){
 				}else if(result == "phoneNumber_registered"){
 					alert("sorry, your phoneNumber has been registered");
 				}else{
-					alert("the interval between the time of last identifying code and now is less than 1 minute");
+					alert("the interval between the time of last identifying code and now is less than 3 minute");
 				}
 			},
 			error: function(state){

@@ -11,13 +11,19 @@
             <generator class="native"></generator>
         </id>
         <many-to-one name="mdCategory" class="com.MusicDessert.ORM.MdCategory" fetch="select">
-            <column name="categoryId" not-null="true" />
+            <column name="categoryId" />
+        </many-to-one>
+        <many-to-one name="mdUser" class="com.MusicDessert.ORM.MdUser" fetch="select">
+            <column name="userId" not-null="true" />
         </many-to-one>
         <property name="name" type="java.lang.String">
             <column name="name" length="60" not-null="true" />
         </property>
+        <property name="path" type="java.lang.String">
+            <column name="path" length="180" not-null="true" />
+        </property>
         <property name="picturePath" type="java.lang.String">
-            <column name="picturePath" length="32" />
+            <column name="picturePath" length="180" />
         </property>
     </class>
 </hibernate-mapping>

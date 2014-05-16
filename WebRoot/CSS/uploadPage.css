@@ -1,0 +1,58 @@
+html,body{
+	margin:0px;
+	padding:0px;
+}
+
+div#logout{
+	position:absolute;
+	right:150px;
+	top:2px;
+	ming-width:270px;
+	height:35px;
+	padding:0px;
+}
+
+div#logout > a{
+	display:inline-block;
+	padding:8px 10px;
+	margin:0px;
+	color:#666;
+	text-align:center;
+	text-decoration:none;
+	font:14 arial,helvetica,sans-serif;
+}
+
+div#logout > a:hover{
+	color:black;
+}
+
+div#logout > span{
+	display:inline-block;
+	position:relative;
+	top:2px;
+	margin:0px;
+	color:#666;
+	height:20px;
+	overflow:hidden;
+}
+
+div#uploadPageLogoBox{
+	margin-left:100px;
+	margin-right:150px;
+	height:60px;
+	background-color:red;
+}
+
+div#uploadPageLogoBox > div{
+	height:100%;
+	max-width:200px;
+	background-color:green;
+}
+
+div#uploadPageLogoBox > div > span{
+	display:table-cell;
+	
+	width:100%;
+	height:100%;
+	background-color:blue;
+}

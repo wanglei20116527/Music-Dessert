@@ -148,8 +148,6 @@ public class RegisterAction extends ActionSupport {
 	
 	private boolean isIdentifyingCodeCorrect(String identifyingCode){
 		boolean isIdentifyingCodeCorrect= false; 
-		System.out.println("#" + identifyingCode + "#");
-		System.out.println("#" + this.getRegisterIdentifyingCoder().getIdentifyingCode() + "#");
 		if(this.getRegisterIdentifyingCoder().getIdentifyingCode() == null){
 			isIdentifyingCodeCorrect = false;	
 		}else if(this.getRegisterIdentifyingCoder().getIdentifyingCode().equals(identifyingCode)){

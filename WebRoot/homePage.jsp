@@ -6,6 +6,7 @@
 <html>
   <head>
 	<link rel="stylesheet" type="text/css" href="CSS/homePage.css"/>
+	<link rel="stylesheet" type="text/css" href="CSS/uploadLinkBox.css"/>
 	<link rel="stylesheet" type="text/css" href="CSS/playerInterface.css"/>
 	<link rel="stylesheet" type="text/css" href="CSS/musicManangerInterface.css"/>
 	<link rel="stylesheet" type="text/css" href="CSS/musicPlayer.css"/>
@@ -27,6 +28,7 @@
 	<script type="text/javascript" src="javascript/login.js"></script>
 	<script type="text/javascript" src="javascript/logout.js"></script>
 	<script type="text/javascript" src="javascript/loginAndLogout.js"></script>
+	
 		
 	<script>
 		$(window).resize(function(){
@@ -37,6 +39,14 @@
   </head>
   
   <body onload = "ajustSizeHomePage()">
+  		<div id = "uploadLinkBox">
+			<a href = "./upload.jsp">
+				<span id = "uploadLinkBoxImage"></span>
+				<span id = "uploadLinkBoxText">音乐上传</span>
+			</a>
+		</div>
+		
+		
 		<div id = "playerInterface">
 			<div id = "head_playerInterface">
 				<div>
@@ -48,20 +58,22 @@
 					createLoginDivOrLogoutDiv();
 				</script>
 			</div>
-			
 			<div id = "foot_playerInterface">
 				<div>
-					<span>王磊</span>
+					<span>网站设计与开发技术</span>
 				</div>
 				<div>
-					<span>网站设计与开发技术</span>
+					<span>王磊</span>
+					<span>屈家兵</span>
+					<span>张迪</span>
+					<span>姚启发</span>
+					<span>王雷</span>
 				</div>
 				<div>
 					<div>
 						<span>© 2014 Music Dessert 本网站的设计界面是参考豆瓣FM和百度音乐盒的界面设计，并且本网站是非商业网站</span>
 					</div>
 				</div>
-				
 			</div>
 			
 			<div id = "playlist_box">
@@ -345,7 +357,7 @@
 			</div>
 			<div id = "flowplayer"></div>
 			<script type="text/javascript">
-				initFlowPlayerWithRecommandedMusics();
+				initFlowPlayerWithMusics();	
 			</script>
 			
 			
@@ -364,3 +376,5 @@
   		</s:if>
 	</body>
 </html>
+
+

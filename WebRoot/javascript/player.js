@@ -38,12 +38,12 @@ function initFlowPlayer(musicPlaylistJSONArray){
 	$("#flowplayer").flowplayer({
       live: false,
       ratio: 5/12,
-      loop: false,
+      loop: true,
       rtmp: "rtmp://s3b78u0kbtx79q.cloudfront.net/cfx/st",
       playlist: musicPlaylistJSONArray        
     });
 	var musicPlayer = getMusicPlayer();
-	musicPlayer.bind("finish",autoPlayMusic);
+	//musicPlayer.bind("finish",autoPlayMusic);
 }
 
 
@@ -69,6 +69,7 @@ function playPrevious(){
 }
 
 function playOrPausePlayedMusic(){
+	
 	var musicPlayer = getMusicPlayer();
 	if(musicPlayer.playing){
 		musicPlayer.pause();
@@ -78,18 +79,19 @@ function playOrPausePlayedMusic(){
 }
 
 
-function initFlowPlayerWithRecommandedMusics(){
+
+function initFlowPlayerWithMusics(){
 	var musics = null;
 	$.ajax({
-	 	url: getRootPath() + "/recommandedMusicAction" ,
+	 	url: getRootPath() + "/musicAction" ,
 		type: "POST",
 		async: false,
 		dateType: "json",
-		success: function(recommandedMusics){
-			recommandedMusics = $.parseJSON(recommandedMusics);
-			var recommandedMusicsPlaylistJSONArray = getRecommandedMusicsPlaylistJSONArray(recommandedMusics);
-			initFlowPlayer(recommandedMusicsPlaylistJSONArray);
-			addMusicsToPlaylist(recommandedMusics);
+		success: function(musics){
+			musics = $.parseJSON(musics);
+			var musicsPlaylistJSONArray = getMusicsPlaylistJSONArray(musics);
+			initFlowPlayer(musicsPlaylistJSONArray);
+			addMusicsToPlaylist(musics);
 		},
 		error: function(state){
 			alert("service error");
@@ -113,7 +115,7 @@ function addMusicsToPlaylist(musics){//music是一个对象数组，每个元素是一个对象，
 	}
 }
 
-function getRecommandedMusicsPlaylistJSONArray(musics){
+function getMusicsPlaylistJSONArray(musics){
 	var musicsJSONArray = [];
 	for(var i = 0; i < musics.length; ++i){
 		var musicJSON = [{mp4:musics[i].musicPath}];

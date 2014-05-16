@@ -33,5 +33,17 @@ public class Login implements com.MusicDessert.Service.Login {
 		}
 		return isUserNameAndPasswordCorrect;
 	}
+	
+	
+	
+	@Override
+	public Integer getUserID(String userName){
+		MdUser user = this.userDAO.findUserByUserName(userName);
+		Integer userID = null;
+		if(user != null){
+			userID = user.getId();
+		}
+		return userID;
+	}
 
 }

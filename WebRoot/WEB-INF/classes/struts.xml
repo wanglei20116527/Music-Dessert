@@ -5,7 +5,9 @@
  
 <struts> 
 	<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory"/>
-
+	<constant name="struts.multipart.maxSize" value="102400000"/>
+	<constant name="struts.multipart.saveDir" value="tmp"/>  
+	
     <package name="struts2" extends="struts-default"> 
         <action name = "testAction" class = "testAction"> 
             <result name = "success">/index.jsp</result> 
@@ -18,6 +20,9 @@
         	<result name = "success" type = "redirect">/index.jsp</result>
         </action> 
         <action name = "sendLoginIdentifyingCodeAction" class = "loginAction" method="sendLoginIdentifyingCode"/>
-        <action name = "recommandedMusicAction" class = "recommandedMusicAction" method = "getAllRecommandedmusics"/>
+        <action name = "musicAction" class = "musicAction" method = "getMusics"/>
+        <action name = "uploadMusicAction" class = "uploadMusicAction" method = "uploadMusic">
+        	<result name = "success">/upload.jsp</result>
+        </action>
     </package>  
 </struts> 

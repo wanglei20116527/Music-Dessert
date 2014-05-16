@@ -13,8 +13,7 @@
 	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
 	http://www.springframework.org/schema/aop
 	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
- 
-
+	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
 		<property name="url" value="jdbc:mysql://localhost:3306/MusicDessert"/>
@@ -79,8 +78,9 @@
 	</aop:config>
 	
    
-    <bean id="testAction" class="Test.TestAction" scope="prototype"> 
-    </bean>
+    <bean id="testAction" class="Test.TestAction" scope="prototype"></bean>
+    
+    <bean id="user" class="com.MusicDessert.Service.implement.User" scope="prototype"></bean>
     
     <bean id="userDAO" class="com.MusicDessert.DAO.implement.UserDAO">
     	<property name="sessionFactory">
@@ -128,10 +128,36 @@
     	</property>
    </bean>
    
-   <bean id = "recommandedMusicAction" class="com.MusicDessert.Action.RecommandedmusicAction" scope = "prototype">
+   <bean id="userMusicDAO" class="com.MusicDessert.DAO.implement.UserMusicDAO">
+    	<property name="sessionFactory">
+    		<ref bean="sessionFactory"/>
+    	</property>
+   </bean>
+   
+   <bean id="userMusic" class="com.MusicDessert.Service.implement.UserMusic" scope="prototype"> 
+    	<property name="userMusicDAO">
+    		<ref bean="userMusicDAO"/>
+    	</property>
+   </bean>
+   
+   <bean id = "uploadMusicAction" class="com.MusicDessert.Action.UploadMusicAction" scope = "prototype">
+   		<property name="userMusic">
+    		<ref bean="userMusic" />
+    	</property>
+   </bean>
+   
+   <bean id = "musicAction" class="com.MusicDessert.Action.MusicAction" scope = "prototype">
+    	<property name="userMusic">
+    		<ref bean="userMusic"/>
+    	</property>
     	<property name="recommandedMusic">
     		<ref bean="recommandedMusic" />
     	</property>
-    </bean>
+    	<property name="user">
+    		<ref bean="user" />
+    	</property>
+    	
+    	
+   </bean>
     
 </beans> 

@@ -20,6 +20,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class LoginAction extends ActionSupport{
 	private static final long serialVersionUID = 1L;
 	private final String USERNAME_KEY = "userName";
+	private final String USERID_KEY = "userID";
 	private final String PASSWORD_KEY = "password";
 	private final String IDENTIFYING_CODE_KEY = "identifyingCode";
 	private final String LOGIN_STATE_KEY = "loginState";//如果为true的话，表示登陆成功，反之则登陆失败
@@ -126,6 +127,8 @@ public class LoginAction extends ActionSupport{
 	public void registerUserLoginSucess(String userName){
 		HttpSession session = this.getSession();
 		session.setAttribute(this.USERNAME_KEY, userName);
+		Integer userID = this.login.getUserID(userName);
+		session.setAttribute(this.USERID_KEY, userID);
 		session.setAttribute(this.LOGIN_STATE_KEY, true);
 	}
 	
@@ -137,7 +140,8 @@ public class LoginAction extends ActionSupport{
 		String userName = this.getUserName();
 		String password =  Md5Password(this.getUserPassword());
 		JSONObject loginResultObjectJSON = new  JSONObject();
-		if(this.login.isUserNameAndPasswordCorrect(userName, password)){
+		if(this.login.isUserNameAndPasswordCorrect(userName, password) && 
+				this.getUserIdentifyingCode().equals(this.logInIdentifyingCoder.getIdentifyingCode())){
 			registerUserLoginSucess(userName);
 			loginResultObjectJSON.put("isLoginSuccess", true);
 			loginResultObjectJSON.put("userName", this.getSession().getAttribute(this.USERNAME_KEY));
@@ -162,13 +166,7 @@ public class LoginAction extends ActionSupport{
 			loginObjectJSON.put("userName", this.getSession().getAttribute(this.USERNAME_KEY));
 		}else{
 			loginObjectJSON.put("loginState", false);
-			//loginObjectJSON.put("userName", "wanglei20116527");
 		}
-		System.out.println(this.getSession().getAttribute(this.USERNAME_KEY));
-		System.out.println(this.getSession().getAttribute(this.LOGIN_STATE_KEY));
 		this.getPrintWriter().println(loginObjectJSON);
 	}
-	
-	
-
 }

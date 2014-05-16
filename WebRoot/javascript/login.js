@@ -61,7 +61,7 @@ function sendLoginIdentifyingCodeToPhone(){
 				}else if(result = "user_not_exist"){
 					alert("the user does not exist");
 				}else{
-					alert("the interval between the time of last identifying code and now is less than 1 minute");
+					alert("the interval between the time of last identifying code and now is less than 3 minute");
 				}
 			},
 			error: function(state){
@@ -85,7 +85,7 @@ function login(){
 			dateType: "json",
 			success: function(logInResult){
 				logInResult = $.parseJSON(logInResult);
-				loginResultHandler(logInResult);
+				window.location.reload(true);
 			},
 			error: function(state){
 				alert("service error");

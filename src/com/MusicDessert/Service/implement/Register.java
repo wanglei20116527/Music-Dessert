@@ -1,5 +1,7 @@
 package com.MusicDessert.Service.implement;
 
+import org.apache.struts2.ServletActionContext;
+
 import com.MusicDessert.DAO.UserDAO;
 import com.MusicDessert.ORM.MdUser;
 
@@ -13,20 +15,15 @@ public class Register implements com.MusicDessert.Service.Register {
 	private boolean createUserMusicFolder(String folderName){
 		FolderMaker folderMaker = new FolderMaker();
 		boolean isFolderMakeSuccess = folderMaker.makeDirectory(folderName);
-		System.out.println("***************************************");
-		System.out.println("isFolderMakeSuccess: " + isFolderMakeSuccess);
-		System.out.println("***************************************");
 		return isFolderMakeSuccess;
 	}
 
 	@Override
 	public void register(MdUser user) {
-		System.out.println("Service register start");
 		this.userDAO.saveUser(user);
 		String folderName = user.getName();
-		System.out.println("wanglei is cool");
-		createUserMusicFolder(folderName);
-		System.out.println("Service register end");
+		String folderPath = ServletActionContext.getServletContext().getRealPath("User/" + folderName);
+		createUserMusicFolder(folderPath);
 	}
 	
 	@Override
