@@ -2,6 +2,7 @@ package com.MusicDessert.ActionTest;
 
 import org.apache.struts2.StrutsSpringJUnit4TestCase;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,6 +22,7 @@ public class LoginActionTest extends StrutsSpringJUnit4TestCase<LoginAction> {
 	}
 	
 	@Test
+	@Ignore
 	public void login(){
 		try{
 			String loginResult = this.executeAction("/loginAction");

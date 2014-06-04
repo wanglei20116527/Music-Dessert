@@ -39,9 +39,9 @@
 		<property name="mappingResources">
 			<list>
 				<value>com/MusicDessert/ORM/MdUser.hbm.xml</value>
-				<value>com/MusicDessert/ORM/MdRecommandedmusic.hbm.xml</value>
+				<value>com/MusicDessert/ORM/MdMusicCategory.hbm.xml</value>
 				<value>com/MusicDessert/ORM/MdMusic.hbm.xml</value>
-				<value>com/MusicDessert/ORM/MdCategory.hbm.xml</value>
+				<value>com/MusicDessert/ORM/MdUserMusic.hbm.xml</value>
 			</list>
 		</property>
 		
@@ -80,9 +80,23 @@
    
     <bean id="testAction" class="Test.TestAction" scope="prototype"></bean>
     
+    <bean id = "userInfoValidityChecker" class="com.MusicDessert.Service.implement.UserInfoValidityChecker" scope = "prototype"/>
+ 
     <bean id="user" class="com.MusicDessert.Service.implement.User" scope="prototype"></bean>
     
     <bean id="userDAO" class="com.MusicDessert.DAO.implement.UserDAO">
+    	<property name="sessionFactory">
+    		<ref bean="sessionFactory"/>
+    	</property>
+    </bean>
+    
+    <bean id="musicDAO" class="com.MusicDessert.DAO.implement.MusicDAO">
+    	<property name="sessionFactory">
+    		<ref bean="sessionFactory"/>
+    	</property>
+    </bean>
+    
+    <bean id="userMusicDAO" class="com.MusicDessert.DAO.implement.UserMusicDAO">
     	<property name="sessionFactory">
     		<ref bean="sessionFactory"/>
     	</property>
@@ -94,12 +108,18 @@
     	</property>
     </bean> 
     
+    <bean id = "registerIdentifyingCodeFactory" class="com.MusicDessert.Service.implement.RegisterIdentifyingCodeFactory" scope = "prototype"/>
     <bean id = "registerAction" class="com.MusicDessert.Action.RegisterAction" scope = "prototype">
+    	<property name="identifyingCodeFactory">
+    		<ref bean="registerIdentifyingCodeFactory"/>
+    	</property>
+    	<property name="userInfoValidityChecker">
+    		<ref bean="userInfoValidityChecker"/>
+    	</property>
     	<property name="register">
-    		<ref bean="register" />
+    		<ref bean="register"/>
     	</property>
     </bean>
-    
     
     <bean id="login" class="com.MusicDessert.Service.implement.Login" scope="prototype"> 
     	<property name="userDAO">
@@ -107,57 +127,43 @@
     	</property>
     </bean>
     
+    <bean id = "logInIdentifyingCodeFactory" class="com.MusicDessert.Service.implement.LogInIdentifyingCodeFactory" scope = "prototype"/>
     <bean id = "loginAction" class="com.MusicDessert.Action.LoginAction" scope = "prototype">
+    	<property name="identifyingCodeFactory">
+    		<ref bean="logInIdentifyingCodeFactory" />
+    	</property>
+    	<property name="userInfoValidityChecker">
+    		<ref bean="userInfoValidityChecker" />
+    	</property>
     	<property name="login">
     		<ref bean="login" />
     	</property>
     </bean>
     
-   <bean id = "logoutAction" class="com.MusicDessert.Action.LogoutAction" scope = "prototype"></bean>     
+   <bean id = "logoutAction" class="com.MusicDessert.Action.LogoutAction" scope = "prototype"></bean> 
    
-   
-   <bean id="recommandedmusicDAO" class="com.MusicDessert.DAO.implement.MdRecommandedmusicDAO">
-    	<property name="sessionFactory">
-    		<ref bean="sessionFactory"/>
+   <bean id="music" class="com.MusicDessert.Service.implement.Music" scope="prototype"> 
+   		<property name="userDAO">
+    		<ref bean="userDAO"/>
     	</property>
-   </bean>
-   
-   <bean id="recommandedMusic" class="com.MusicDessert.Service.implement.Recommandedmusic" scope="prototype"> 
-    	<property name="recommandedmusicDAO">
-    		<ref bean="recommandedmusicDAO"/>
+    	<property name="musicDAO">
+    		<ref bean="musicDAO"/>
     	</property>
-   </bean>
-   
-   <bean id="userMusicDAO" class="com.MusicDessert.DAO.implement.UserMusicDAO">
-    	<property name="sessionFactory">
-    		<ref bean="sessionFactory"/>
-    	</property>
-   </bean>
-   
-   <bean id="userMusic" class="com.MusicDessert.Service.implement.UserMusic" scope="prototype"> 
     	<property name="userMusicDAO">
     		<ref bean="userMusicDAO"/>
     	</property>
-   </bean>
+    </bean>
    
-   <bean id = "uploadMusicAction" class="com.MusicDessert.Action.UploadMusicAction" scope = "prototype">
-   		<property name="userMusic">
-    		<ref bean="userMusic" />
+    <bean id = "uploadMusicAction" class="com.MusicDessert.Action.UploadMusicAction" scope = "prototype">
+    	<property name="music">
+    		<ref bean="music"/>
     	</property>
-   </bean>
-   
-   <bean id = "musicAction" class="com.MusicDessert.Action.MusicAction" scope = "prototype">
-    	<property name="userMusic">
-    		<ref bean="userMusic"/>
+    </bean>
+    
+    <bean id = "getMusicAction" class="com.MusicDessert.Action.GetMusicAction" scope = "prototype">
+    	<property name="music">
+    		<ref bean="music"/>
     	</property>
-    	<property name="recommandedMusic">
-    		<ref bean="recommandedMusic" />
-    	</property>
-    	<property name="user">
-    		<ref bean="user" />
-    	</property>
-    	
-    	
-   </bean>
+    </bean>
     
 </beans> 

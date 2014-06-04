@@ -12,17 +12,26 @@
         <action name = "testAction" class = "testAction"> 
             <result name = "success">/index.jsp</result> 
         </action>
+        
         <action name = "registerAction" class = "registerAction" method = "register"/> 
-        <action name = "sendRegisterIdentifyingCodeAction" class = "registerAction" method = "sendRegisterIdentifyingCode"/>
+        <action name = "sendRegisterIdentifyingCodeAction" class = "registerAction" method = "sendIdentifyingCode"/>
+        
         <action name = "loginAction" class = "loginAction" method = "login"/> 
-        <action name = "isUserloginAction" class = "loginAction" method = "isUserLogin"/> 
+        <action name = "sendLoginIdentifyingCodeAction" class = "loginAction" method="sendIdentifyingCode"/>
+        
+        <action name = "isUserloginAction" class = "loginAction" method = "isUserLogin"/>
         <action name = "logoutAction" class = "logoutAction" method = "logout">
         	<result name = "success" type = "redirect">/index.jsp</result>
-        </action> 
-        <action name = "sendLoginIdentifyingCodeAction" class = "loginAction" method="sendLoginIdentifyingCode"/>
-        <action name = "musicAction" class = "musicAction" method = "getMusics"/>
-        <action name = "uploadMusicAction" class = "uploadMusicAction" method = "uploadMusic">
-        	<result name = "success">/upload.jsp</result>
         </action>
+        
+        <action name = "getMusicAction" class = "getMusicAction" method = "getMusics">
+        	<result name = "success" type = "redirect">/index.jsp</result>
+        </action>
+        
+        <action name = "uploadMusicAction" class = "uploadMusicAction" method = "uploadMusic">
+        	<result name = "success" type = "redirect">/index.jsp</result>
+        </action> 
+        
+        
     </package>  
 </struts> 

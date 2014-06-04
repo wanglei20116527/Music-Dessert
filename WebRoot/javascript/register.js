@@ -57,31 +57,48 @@ function checkRegisterIdentifyingCode(){
 }
 
 function registerResultHandler(result){
-	if(result == "userName_valid"){
+	alert(result);
+	/*switch(result){
+	case "UserName_Invalid":
 		$("#register_userName").val("");
 		$("#register_userName").attr("placeholder","Your user name is not valid");
-	}else if(result == "userName_registered"){
+		break;
+	case "UserName_Registered":
 		$("#register_userName").val("");
 		$("#register_userName").attr("placeholder","User name has been registered");
-	}else if(result == "password_valid"){
+		break;
+	case "Password_Invalid":
 		$("#register_password").val("");
 		$("#register_password").attr("placeholder","Your password is not valid");
-	}else if(result == "phoneNumber_valid"){
+		break;
+	case "PhoneNumber_Invalid":
 		$("#register_phoneNumber").val("");
 		$("#register_phoneNumber").attr("placeholder","Your phoneNumber is not valid");
-	}else if(result == "phoneNumber_registered"){
+		break;
+	case "PhoneNumber_Registered":
 		$("#register_phoneNumber").val("");
 		$("#register_phoneNumber").attr("placeholder","phonenumber registered");
-	}else if(result == "identifyingCode_Lose_Efficacy"){
+		break;
+	case "IdentifyingCode_UnCreated":
 		$("#identifyingCode").val("");
-		alert("Identifying Code has lost Efficacy");
-	}else if(result == "identifyingCode_wrong"){
+		alert("Identifying Code had not been created");
+		break;
+	case "IdentifyingCode_LoseEfficacy":
 		$("#identifyingCode").val("");
-		$("#identifyingCode").attr("placeholder","Wrong");
-	}else{
-		closeRegisterBox();
-		openLogInBox();
-	}
+		alert("Identifying Code had lost Efficacy");
+		break;
+	case "IdentifyingCode_Wrong":
+		$("#identifyingCode").val("");
+		alert("Identifying Code wrong");
+		break;
+	case "Success":
+		alert("Success");
+		//closeRegisterBox();
+		//openLogInBox();
+		break;
+	default:
+		alert("unknow Error");
+	}	*/
 }
 
 
@@ -92,6 +109,7 @@ function register(){
 		var password = getPassword();
 		var phoneNumber = getPhoneNumber();
 		var identifyingCode = getRegisterIdentifyingCode();
+		alert("success to register");
 		$.ajax({
 		 	url: getRootPath() + "/registerAction" ,
 			type: "POST",
@@ -100,11 +118,10 @@ function register(){
 			success: function(result){
 				result = $.trim(result);
 				registerResultHandler(result);
-			},
-			error: function(state){
-				alert("error");
-            }
+			}
 		});
+	}else{
+		alert("Information invalid, refuse to submit");
 	}
 	return false;
 }
@@ -119,16 +136,22 @@ function sendRegisterIdentifyingCodeToPhone(){
 			dateType: "json",
 			success: function(result){
 				result = $.trim(result);
-				if(result == "success"){
-					alert("register identifying code has been send to your phone");
-				}else if(result == "phoneNumber_registered"){
-					alert("sorry, your phoneNumber has been registered");
-				}else{
+				switch(result){
+				case "IdentifyingCode_Created":
 					alert("the interval between the time of last identifying code and now is less than 3 minute");
+					break;
+				case "PhoneNumber_Registered":
+					alert("sorry, your phoneNumber has been registered");
+					break;
+				case "Success":
+					alert("register identifying code has been send to your phone");
+					break;
+				default:
+					alert("unknow Error");
 				}
 			},
 			error: function(state){
-				alert("·¢ÉúÎ´Öª´íÎó");
+				alert("service Error");
             }
 		});
 	}

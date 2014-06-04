@@ -6,10 +6,12 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-public class SMS{
-	private static final String  MESSAGESEND_NET_INTEFACE = "http://2.smsfx.sinaapp.com/send.php?tel=15905515978&pwd=wang19921211&";
+public class SMS implements com.MusicDessert.Service.SMS {
+
+	private final String  MESSAGESEND_NET_INTEFACE = "http://2.smsfx.sinaapp.com/send.php?tel=15905515978&pwd=wang19921211&";
 	
-	public static void sendMessageToPhone(String targetPhoneNumber, String context){
+	@Override
+	public void sendMessageToPhone(String targetPhoneNumber, String context){
 		URL url = null;
 		URLConnection conn = null;
 		try{
@@ -33,4 +35,5 @@ public class SMS{
 			e.printStackTrace();
 		}
 	}
+
 }

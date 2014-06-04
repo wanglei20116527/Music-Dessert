@@ -3,40 +3,46 @@ package com.MusicDessert.ORM;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * MdUser entity. @author MyEclipse Persistence Tools
- */
-
 public class MdUser implements java.io.Serializable {
-
-	// Fields
-
+	private static final long serialVersionUID = 1L;
+	
+	private final String isAdmin_Default_Value = "N";//表示isAdmin字段的默认值
+	
 	private Integer id;
-	private String name;
+	private String userName;
 	private String password;
 	private String phoneNumber;
-	private Set mdCategories = new HashSet(0);
-
-	// Constructors
+	private String isAdmin;
+	private Set mdUserMusics = new HashSet(0);
+	private Set mdMusicCategories = new HashSet(0);
 
 	public MdUser() {
 	}
-
-	public MdUser(String name, String password, String phoneNumber) {
-		this.name = name;
+	
+	public MdUser(String userName, String password, String phoneNumber){
+		this.userName = userName;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
+		this.isAdmin = isAdmin_Default_Value;
 	}
 
-	public MdUser(String name, String password, String phoneNumber,
-			Set mdCategories) {
-		this.name = name;
+	public MdUser(String userName, String password, String phoneNumber,
+			String isAdmin) {
+		this.userName = userName;
 		this.password = password;
 		this.phoneNumber = phoneNumber;
-		this.mdCategories = mdCategories;
+		this.isAdmin = isAdmin;
 	}
 
-	// Property accessors
+	public MdUser(String userName, String password, String phoneNumber,
+			String isAdmin, Set mdUserMusics, Set mdMusicCategories) {
+		this.userName = userName;
+		this.password = password;
+		this.phoneNumber = phoneNumber;
+		this.isAdmin = isAdmin;
+		this.mdUserMusics = mdUserMusics;
+		this.mdMusicCategories = mdMusicCategories;
+	}
 
 	public Integer getId() {
 		return this.id;
@@ -46,12 +52,12 @@ public class MdUser implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public String getName() {
-		return this.name;
+	public String getUserName() {
+		return this.userName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {
@@ -70,12 +76,28 @@ public class MdUser implements java.io.Serializable {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public Set getMdCategories() {
-		return this.mdCategories;
+	public String getIsAdmin() {
+		return this.isAdmin;
 	}
 
-	public void setMdCategories(Set mdCategories) {
-		this.mdCategories = mdCategories;
+	public void setIsAdmin(String isAdmin) {
+		this.isAdmin = isAdmin;
+	}
+
+	public Set getMdUserMusics() {
+		return this.mdUserMusics;
+	}
+
+	public void setMdUserMusics(Set mdUserMusics) {
+		this.mdUserMusics = mdUserMusics;
+	}
+
+	public Set getMdMusicCategories() {
+		return this.mdMusicCategories;
+	}
+
+	public void setMdMusicCategories(Set mdMusicCategories) {
+		this.mdMusicCategories = mdMusicCategories;
 	}
 
 }

@@ -4,7 +4,7 @@
 <hibernate-reverse-engineering>
 	<table name="md_user" catalog="musicdessert">
 		<primary-key>
-			<generator class="native"></generator>
+			<generator class="increment"></generator>
 		</primary-key>
 	</table>
 	<table name="md_recommandedmusic" catalog="musicdessert">
@@ -14,12 +14,22 @@
 	</table>
 	<table name="md_music" catalog="musicdessert">
 		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+	<table name="md_category" catalog="musicdessert">
+		<primary-key>
 			<generator class="native"></generator>
 		</primary-key>
 	</table>
-<table name="md_category" catalog="musicdessert">
+	<table name="md_music_category" catalog="musicdessert">
+		<primary-key>
+			<generator class="increment"></generator>
+		</primary-key>
+	</table>
+<table name="md_user_music" catalog="musicdessert">
 	<primary-key>
-		<generator class="native"></generator>
+		<generator class="increment"></generator>
 	</primary-key>
 </table>
 </hibernate-reverse-engineering>

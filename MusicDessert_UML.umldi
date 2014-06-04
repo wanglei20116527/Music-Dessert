@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagrams:Diagrams xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.topcased.org/DI/1.0" xmlns:diagrams="http://www.topcased.org/Diagrams/1.0" xmi:id="_P0rLsepwEeOEJbM_SR4iPw" activeDiagram="_XH0CIOpwEeOEJbM_SR4iPw">
+  <model href="MusicDessert_UML.uml#_qb8akM37EdqwVrslYOdUDA"/>
+  <diagrams xmi:id="_P0u2EOpwEeOEJbM_SR4iPw" position="0,0" size="100,100" name="MusicDessert_UML" viewport="0,0">
+    <property xmi:id="_QPxzUOpwEeOEJbM_SR4iPw" key="pageFormatName" value="A4"/>
+    <property xmi:id="_QPxzUepwEeOEJbM_SR4iPw" key="diagramWidth" value="840"/>
+    <property xmi:id="_QPxzUupwEeOEJbM_SR4iPw" key="diagramHeight" value="1188"/>
+    <property xmi:id="_QPxzU-pwEeOEJbM_SR4iPw" key="pageMarginName" value="Small Margin"/>
+    <property xmi:id="_QPxzVOpwEeOEJbM_SR4iPw" key="diagramTopMargin" value="20"/>
+    <property xmi:id="_QPxzVepwEeOEJbM_SR4iPw" key="diagramBottomMargin" value="20"/>
+    <property xmi:id="_QPxzVupwEeOEJbM_SR4iPw" key="diagramLeftMargin" value="20"/>
+    <property xmi:id="_QPxzV-pwEeOEJbM_SR4iPw" key="diagramRightMargin" value="20"/>
+    <property xmi:id="_QPyaYOpwEeOEJbM_SR4iPw" key="orientation" value="portrait"/>
+    <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_P0vdIOpwEeOEJbM_SR4iPw" presentation="org.topcased.modeler.uml.classdiagram">
+      <element href="MusicDessert_UML.uml#_qb8akM37EdqwVrslYOdUDA"/>
+    </semanticModel>
+    <contained xsi:type="di:GraphNode" xmi:id="_UyM1oOpwEeOEJbM_SR4iPw" position="167,81" size="100,80">
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_UyNcsOpwEeOEJbM_SR4iPw" presentation="default">
+        <element href="MusicDessert_UML.uml#_U1-iYOpwEeOEJbM_SR4iPw"/>
+      </semanticModel>
+    </contained>
+  </diagrams>
+  <subdiagrams xmi:id="_XHy0AOpwEeOEJbM_SR4iPw">
+    <model href="MusicDessert_UML.uml#_U1-iYOpwEeOEJbM_SR4iPw"/>
+    <diagrams xmi:id="_XH0CIOpwEeOEJbM_SR4iPw" position="0,0" size="100,100" name="unnamed" viewport="3,17">
+      <property xmi:id="_XIwdUOpwEeOEJbM_SR4iPw" key="pageFormatName" value=""/>
+      <property xmi:id="_XIwdUepwEeOEJbM_SR4iPw" key="diagramWidth" value="1326"/>
+      <property xmi:id="_XIwdUupwEeOEJbM_SR4iPw" key="diagramHeight" value="1263"/>
+      <property xmi:id="_XIwdU-pwEeOEJbM_SR4iPw" key="pageMarginName" value="A4"/>
+      <property xmi:id="_XIwdVOpwEeOEJbM_SR4iPw" key="diagramTopMargin" value="20"/>
+      <property xmi:id="_XIwdVepwEeOEJbM_SR4iPw" key="diagramBottomMargin" value="20"/>
+      <property xmi:id="_XIwdVupwEeOEJbM_SR4iPw" key="diagramLeftMargin" value="20"/>
+      <property xmi:id="_XIxEYOpwEeOEJbM_SR4iPw" key="diagramRightMargin" value="20"/>
+      <property xmi:id="_XIxEYepwEeOEJbM_SR4iPw" key="orientation" value="portrait"/>
+      <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_XH0CIepwEeOEJbM_SR4iPw" presentation="org.topcased.modeler.uml.classdiagram">
+        <element href="MusicDessert_UML.uml#_U1-iYOpwEeOEJbM_SR4iPw"/>
+      </semanticModel>
+      <contained xsi:type="di:GraphNode" xmi:id="_9Fu48OpyEeOEJbM_SR4iPw" position="35,35" size="768,-1">
+        <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu48epyEeOEJbM_SR4iPw">
+          <element href="MusicDessert_UML.uml#_8_EQQOpyEeOEJbM_SR4iPw"/>
+        </semanticModel>
+        <contained xsi:type="di:GraphNode" xmi:id="_9Fu48upyEeOEJbM_SR4iPw">
+          <property xmi:id="_9Fu48-pyEeOEJbM_SR4iPw" key="eStructuralFeatureID" value="37"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu49OpyEeOEJbM_SR4iPw">
+            <element href="MusicDessert_UML.uml#_8_EQQOpyEeOEJbM_SR4iPw"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu49epyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu49upyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9Bt7oOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu49-pyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu4-OpyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9B1QYOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu4-epyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu4-upyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9B7XAOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+        </contained>
+        <contained xsi:type="di:GraphNode" xmi:id="_9Fu4--pyEeOEJbM_SR4iPw">
+          <property xmi:id="_9Fu4_OpyEeOEJbM_SR4iPw" key="eStructuralFeatureID" value="47"/>
+          <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu4_epyEeOEJbM_SR4iPw">
+            <element href="MusicDessert_UML.uml#_8_EQQOpyEeOEJbM_SR4iPw"/>
+          </semanticModel>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu4_upyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu4_-pyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9B_BYOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5AOpyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5AepyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9CCrwOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5AupyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5A-pyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9CGWIOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5BOpyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5BepyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9CKAgOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5BupyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5B-pyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9CND0OpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5COpyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5CepyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9CQuMOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5CupyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5C-pyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9CUYkOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5DOpyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5DepyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9DI38OpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5DupyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5D-pyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9DOXgepyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5EOpyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5EepyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9DTQAOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5EupyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5E-pyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9DXhcOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5FOpyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5FepyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9Dby4OpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5FupyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5F-pyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9DgEUOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5GOpyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5GepyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9DkVwOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+          <contained xsi:type="di:GraphNode" xmi:id="_9Fu5GupyEeOEJbM_SR4iPw" position="186,194">
+            <semanticModel xsi:type="di:EMFSemanticModelBridge" xmi:id="_9Fu5G-pyEeOEJbM_SR4iPw">
+              <element href="MusicDessert_UML.uml#_9DoAIOpyEeOEJbM_SR4iPw"/>
+            </semanticModel>
+          </contained>
+        </contained>
+      </contained>
+    </diagrams>
+  </subdiagrams>
+</diagrams:Diagrams>

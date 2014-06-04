@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.MusicDessert.ORM.MdUserMusic" table="md_user_music" catalog="musicdessert">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="increment"></generator>
+        </id>
+        <many-to-one name="mdUser" class="com.MusicDessert.ORM.MdUser" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="mdMusic" class="com.MusicDessert.ORM.MdMusic" fetch="select">
+            <column name="music_id" not-null="true" />
+        </many-to-one>
+        <property name="playTimes" type="java.lang.Integer">
+            <column name="play_times" />
+        </property>
+    </class>
+</hibernate-mapping>

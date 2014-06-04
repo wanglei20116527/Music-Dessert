@@ -1,40 +1,41 @@
 package com.MusicDessert.ORM;
 
-/**
- * MdMusic entity. @author MyEclipse Persistence Tools
- */
+import java.util.HashSet;
+import java.util.Set;
 
 public class MdMusic implements java.io.Serializable {
-
-	// Fields
-
+	private static final long serialVersionUID = 1L;
+	
 	private Integer id;
-	private MdCategory mdCategory;
-	private MdUser mdUser;
-	private String name;
+	private MdMusicCategory mdMusicCategory;
+	private String displayName;
+	private String systemName;
 	private String path;
-	private String picturePath;
+	private String musician;
+	private String style;
+	private Set mdUserMusics = new HashSet(0);
 
 	public MdMusic() {
-		//mdUser = new MdUser();
-		//mdCategory = new MdCategory();
 	}
 
-	/** minimal constructor */
-	public MdMusic(MdUser mdUser, String name, String path) {
-		this.mdUser = mdUser;
-		this.name = name;
+	public MdMusic(MdMusicCategory mdMusicCategory, String displayName,
+			String systemName, String path) {
+		this.mdMusicCategory = mdMusicCategory;
+		this.displayName = displayName;
+		this.systemName = systemName;
 		this.path = path;
 	}
 
-	/** full constructor */
-	public MdMusic(MdCategory mdCategory, MdUser mdUser, String name,
-			String path, String picturePath) {
-		this.mdCategory = mdCategory;
-		this.mdUser = mdUser;
-		this.name = name;
+	public MdMusic(MdMusicCategory mdMusicCategory, String displayName,
+			String systemName, String path, String musician, String style,
+			Set mdUserMusics) {
+		this.mdMusicCategory = mdMusicCategory;
+		this.displayName = displayName;
+		this.systemName = systemName;
 		this.path = path;
-		this.picturePath = picturePath;
+		this.musician = musician;
+		this.style = style;
+		this.mdUserMusics = mdUserMusics;
 	}
 
 	// Property accessors
@@ -47,28 +48,28 @@ public class MdMusic implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public MdCategory getMdCategory() {
-		return this.mdCategory;
+	public MdMusicCategory getMdMusicCategory() {
+		return this.mdMusicCategory;
 	}
 
-	public void setMdCategory(MdCategory mdCategory) {
-		this.mdCategory = mdCategory;
+	public void setMdMusicCategory(MdMusicCategory mdMusicCategory) {
+		this.mdMusicCategory = mdMusicCategory;
 	}
 
-	public MdUser getMdUser() {
-		return this.mdUser;
+	public String getDisplayName() {
+		return this.displayName;
 	}
 
-	public void setMdUser(MdUser mdUser) {
-		this.mdUser = mdUser;
+	public void setDisplayName(String displayName) {
+		this.displayName = displayName;
 	}
 
-	public String getName() {
-		return this.name;
+	public String getSystemName() {
+		return this.systemName;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setSystemName(String systemName) {
+		this.systemName = systemName;
 	}
 
 	public String getPath() {
@@ -79,12 +80,28 @@ public class MdMusic implements java.io.Serializable {
 		this.path = path;
 	}
 
-	public String getPicturePath() {
-		return this.picturePath;
+	public String getMusician() {
+		return this.musician;
 	}
 
-	public void setPicturePath(String picturePath) {
-		this.picturePath = picturePath;
+	public void setMusician(String musician) {
+		this.musician = musician;
+	}
+
+	public String getStyle() {
+		return this.style;
+	}
+
+	public void setStyle(String style) {
+		this.style = style;
+	}
+
+	public Set getMdUserMusics() {
+		return this.mdUserMusics;
+	}
+
+	public void setMdUserMusics(Set mdUserMusics) {
+		this.mdUserMusics = mdUserMusics;
 	}
 
 }

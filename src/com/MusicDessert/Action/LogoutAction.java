@@ -1,25 +1,16 @@
 package com.MusicDessert.Action;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
+import com.MusicDessert.ActionSupport.CustomActionSupport;
 
-import org.apache.struts2.ServletActionContext;
-
-import com.opensymphony.xwork2.ActionSupport;
-
-public class LogoutAction extends ActionSupport {
+public final class LogoutAction extends CustomActionSupport {
 	private static final long serialVersionUID = 1L;
 
-	private HttpServletRequest getRequest(){
-		return ServletActionContext.getRequest();
-	}
-
-	private HttpSession getSession(){
-		return this.getRequest().getSession();
-	}
-	
-	public String logout() throws Exception{
-		this.getSession().invalidate();
-		return this.SUCCESS;
+	public String logout(){
+		try{
+			this.getSession().invalidate();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return "success";
 	}
 }

@@ -57,7 +57,7 @@
 							<a href = "javascript:;" onclick = "sendRegisterIdentifyingCodeToPhone()">create</a>
 						</div>
 						<div class = "submitButton">
-							<input type = "submit" value = "注册"/>
+							<input id = "registerSubmitButton" type = "submit" value = "注册"/>
 						</div>
 					</form>
 				</div>
@@ -73,4 +73,8 @@
 			</div>
 		</div>
   </body>
+  <script type="text/javascript">
+  	setHeightForRightPartOfRegisterBox();
+  	setPositionOfRegisterButtonForRegisterBox();
+  </script>
 </html>

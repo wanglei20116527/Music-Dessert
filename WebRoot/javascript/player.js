@@ -83,7 +83,7 @@ function playOrPausePlayedMusic(){
 function initFlowPlayerWithMusics(){
 	var musics = null;
 	$.ajax({
-	 	url: getRootPath() + "/musicAction" ,
+	 	url: getRootPath() + "/getMusicAction" ,
 		type: "POST",
 		async: false,
 		dateType: "json",

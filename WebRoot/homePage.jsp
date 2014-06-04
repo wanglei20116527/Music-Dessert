@@ -375,6 +375,9 @@
   			<s:include value="register.jsp"/>
   		</s:if>
 	</body>
+	<script type="text/javascript">
+		
+	</script>
 </html>
 
 

@@ -36,6 +36,7 @@ package com.MusicDessert.ActionTest;
 
 import org.apache.struts2.StrutsSpringJUnit4TestCase;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -53,6 +54,7 @@ public class SendLoginIdentifyingCodeTest extends StrutsSpringJUnit4TestCase<Log
 	}
 	
 	@Test
+	@Ignore
 	public void sendLoginIdentifyingCodeTest(){
 		try{
 			String result = this.executeAction("/sendLoginIdentifyingCodeAction");

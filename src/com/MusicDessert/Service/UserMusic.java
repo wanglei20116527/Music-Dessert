@@ -10,6 +10,4 @@ public interface UserMusic {
 	public boolean saveUserMusicToDB(MdMusic userMusic);
 	public boolean saveUserMusicToUserMusicFolder(String userName, String musicName, File musicFile);
 	public List<MdMusic> getUserMusicsByUserID(Integer userID);
-	
-
 }

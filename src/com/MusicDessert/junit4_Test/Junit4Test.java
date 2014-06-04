@@ -3,8 +3,6 @@ package com.MusicDessert.junit4_Test;
 import java.util.Arrays;
 import java.util.Collection;
 
-import javax.annotation.security.RunAs;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -38,14 +36,17 @@ public class Junit4Test {
 		
 	}
 	
-	@Test(timeout=2000)
+	@Test(timeout=200)
 	public void mainTest(){
-		System.out.println("name: " + this.name1 + " friend name: " + this.name2);
+		//for(int i = 0; i < 10000; ++i){
+			System.out.println("name: " + this.name1 + " friend name: " + this.name2);
+		//}
 	}
 	
 	@Test
 	@Ignore
 	public void mainTest2(){
+		
 	}
 	
 	@After

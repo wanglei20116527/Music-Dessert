@@ -2,10 +2,9 @@ package com.MusicDessert.DAO;
 
 import java.util.List;
 
-import com.MusicDessert.ORM.MdMusic;
-import com.MusicDessert.ORM.MdUser;
+import com.MusicDessert.ORM.MdUserMusic;
 
 public interface UserMusicDAO {
-	public void saveUserMusic(MdMusic userMusic);
-	public List<MdMusic> getUserMusicsByUserID(Integer userID);
+	public void saveUserMusic(MdUserMusic userMusic);
+	public List<MdUserMusic> getUserMusicsByUserID(Integer userID);
 }
